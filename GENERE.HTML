@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-image:url(socrate.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+}
+    h1{
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 50px;
+
+    }
+    button{
+        font-size: larger;
+        color: white;
+        width: 200px;
+        height: 50px;
+        border-radius: 10px;
+        margin-top:200px;
+        margin-left: 250px;
+        background-color: rgb(227, 0, 0);
+       
+    }
+    .click{
+        width: 50px;
+    }
+    
+  
+        .citation {
+            margin-top: 10px;
+            margin-left:800px ;
+            color: white;
+            font-size:large;
+    }
+    </style>
+</head>
+<body>
+    <h1>CITATION DE SOCRATE</h1>
+    <div class="click"><button onclick="idi()">Générer une citation</button></div>
+    <div class="citation"><p id="demo"></p></div>
+    <p></p>
+<script>
+    var citation = ["connais toi toi-meme",
+     "je ne suis ni Athénien, ni grec, mais un citoyen du monde", "Dans tous les cas mariez-vous", "Tout ce que je sais, c'est que je ne sais rien", "Que voulez-vous que je lui apprenne? il ne m'aime pas", "il n'y a point de travail honteux"]
+    function idi(){
+        var randomIndex = Math.floor(Math.random()* citation.length);
+        var randomcitation = citation[randomIndex];
+        document.getElementById("demo").innerHTML=  randomcitation+"<br>" ;
+    }
+</script>
+</body>
+</html>
